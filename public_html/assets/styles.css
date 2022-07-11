@@ -1,0 +1,124 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-image: url('background.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.container {
+    text-align: center;
+}
+.content {
+    margin-top: 20px;
+    display: inline-flex;
+}
+
+.general {
+    height: 80vh;
+    overflow-y: scroll;
+    border-radius: 10px;
+    padding: 0px 20px;
+}
+
+.controls {
+    position: sticky;
+    top: 0px;
+    background-color: rgb(171 228 255);
+    padding: 15px 0;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+}
+
+.controls label{
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.controls .input-filter {
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    width: 300px;
+}
+
+.controls .input-filter:focus-visible {
+    outline: 1px solid rgb(112, 207, 252);
+}
+
+.controls .btn-reorder {
+    margin-left: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 10px 20px;
+    background-color: #008eff;
+    color: white;
+    font-weight: bold;
+}
+
+.controls .btn-reorder:hover {
+    cursor: pointer;
+}
+
+.segunda-columna {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    position: sticky;
+    top: 0px;
+}
+
+.img-selected {
+    width: 400px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.2);
+}
+
+.images-container {
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    background-color: rgb(243, 243, 243);
+}
+
+.images-container h3 {
+    padding: 10px 10px 0px;
+}
+
+.images-container > div {
+    padding: 0px 5px;
+}
+
+.img-click {
+    border-radius: 10px;
+    transition: all .2s ease-in-out;
+    object-fit: cover;
+}
+
+.img-click:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+@media (max-width: 896px) {
+    .content {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .input-filter {
+        margin: 10px 0;
+    }
+    
+    .img-selected {
+        max-width: 100%;
+    }
+
+    .images-container > div {
+        text-align: center;
+    }
+}

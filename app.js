@@ -7,7 +7,7 @@ const express = require('express')
 const dotenv = require('dotenv').config()
 
 const app = express()
-const puerto = process.env.PUERTO
+const puerto = process.env.PUERTO ? process.env.PUERTO : 3000
 
 app.use(express.static('public_html'))
 
